@@ -198,3 +198,15 @@ FROM
      entities_likes AS e_l
 WHERE
     e_l.entity_id = @entity;
+
+-- все комментарии, относящиеся к фото
+SET @entity = 1;
+SELECT
+        e.id
+FROM
+    entities AS e
+        INNER JOIN entities_attributes ea on e.id = ea.entity_id
+WHERE
+    e.entity_type = 2 -- (SELECT e_t.id FROM entities_types AS e_t WHERE e_t.entity_name = 'photo')
+        AND ea.attribute_name = 'photo_id'
+        AND ea.attribute_value = CONVERT(@entity, char);
