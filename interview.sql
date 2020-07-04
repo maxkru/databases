@@ -162,6 +162,7 @@ INSERT INTO social_network.entities_attributes (id, entity_id, attribute_name, a
 INSERT INTO social_network.entities_attributes (id, entity_id, attribute_name, attribute_value) VALUES (3, 1, 'public', 'true'); -- показывать ли фото всем
 INSERT INTO social_network.entities_attributes (id, entity_id, attribute_name, attribute_value) VALUES (4, 2, 'text', 'Looking good!'); -- текст комментария Боба
 INSERT INTO social_network.entities_attributes (id, entity_id, attribute_name, attribute_value) VALUES (5, 2, 'date_and_time', '20200704144812'); -- дата/время комментария Боба
+INSERT INTO social_network.entities_attributes (id, entity_id, attribute_name, attribute_value) VALUES (6, 2, 'photo_id', '1'); -- к какому фото относится комментарий
 
 create table social_network.entities_likes
 (
